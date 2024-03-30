@@ -3,13 +3,19 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css"/>
+    <link rel="stylesheet" href="src/style.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.17.0/xlsx.full.min.js"></script>
   </head>
-  <body　bgcolor = white>
-    <script>
-    var a = "月曜1"
-    var gTabldID = 'sampleTable';  // テーブルのエリアのIDを設定
+  <body>
+  
+    <script type="text/javascript">
+    
+
+
+ //===============================================================
+ //  フィルタテーブルの共通変数　設定要！
+ //===============================================================
+var gTabldID = 'sampleTable';  // テーブルのエリアのIDを設定
 var gTfStartRow = 0;
 var gTfColList  = [];             // ボタンが配置されている列番号
 var gTfListSave = {};             // フィルタリストの保存状態
@@ -378,52 +384,32 @@ function trim(argStr){
   rcStr	= rcStr.replace(/[ 　\r\n]+$/g, '');
   return rcStr;
 }
-var A001 = oooo
+function modal(ele){
+  var clickedid = ele.id
+  var contentsid = "b"+clickedid
+  alert(contentsid)
+}
 </script>
-    
-    <table id="sampleTable">  <!--- テーブルのIDをJavaScriptに定義します --->
+    <div class="bgarea"></div>
+   <table id="sampleTable">  <!--- テーブルのIDをJavaScriptに定義します --->
   <tr>
+    <th >詳細/登録</th>
     <th cmanFilterBtn>氏名</th>
     <th cmanFilterBtn>年齢</th>
     <th cmanFilterBtn>性別</th>
     <th cmanFilterBtn>地域</th>
     <th cmanFilterBtn>合計</th>
-    <th cmanFilterBtn>氏名</th>
-    <th cmanFilterBtn>年齢</th>
-    <th cmanFilterBtn>性別</th>
-    <th cmanFilterBtn>地域</th>
-    <th cmanFilterBtn>合計</th>
-    <th cmanFilterBtn>氏名</th>
-    <th cmanFilterBtn>年齢</th>
-    <th cmanFilterBtn>性別</th>
   </tr>
-  <tr>	<td>[青山]月１（前期）</td>	<td>フレッシャーズ・セミナー</td>	<td>當間 麗</td>	<td>青山スタンダード科目</td>	<td>対面授業 / Classes in-person</td>	<td>0</td>	</tr>
-<tr>	<td>[青山]月１（前期）</td>	<td>キリスト教概論Ⅰ</td>	<td>伊藤 悟</td>	<td>青山スタンダード科目</td>	<td>対面授業 / Classes in-person</td>	<td>0</td>	</tr>
-<tr>	<td>[青山]月１（前期）</td>	<td>キリスト教概論Ⅰ</td>	<td>塩谷 直也</td>	<td>青山スタンダード科目</td>	<td>対面授業 / Classes in-person</td>	<td>0</td>	</tr>
-<tr>	<td>[青山]月１（前期）</td>	<td>キリスト教概論Ⅱ</td>	<td>髙砂 民宣</td>	<td>青山スタンダード科目</td>	<td>対面授業 / Classes in-person</td>	<td>0</td>	</tr>
-<tr>	<td>[青山]月１（前期）</td>	<td>キリスト教概論Ⅱ</td>	<td>森島 豊</td>	<td>青山スタンダード科目</td>	<td>対面授業 / Classes in-person</td>	<td>0</td>	</tr>
-<tr>	<td>[青山]月１（前期）</td>	<td>キリスト教概論Ⅱ</td>	<td>八木 隆之</td>	<td>青山スタンダード科目</td>	<td>対面授業 / Classes in-person</td>	<td>0</td>	</tr>
-<tr>	<td>[青山]月１（前期）</td>	<td>スペイン語Ⅰ（Ｂ）－２（再）</td>	<td>YENG ABAD, Jaime F.</td>	<td>青山スタンダード科目</td>	<td>対面授業 / Classes in-person</td>	<td>0</td>	</tr>
-<tr>	<td>[青山]月１（前期）</td>	<td>中国語Ⅰ（Ｂ）－１（再）</td>	<td>綿貫 哲郎</td>	<td>青山スタンダード科目</td>	<td>対面授業 / Classes in-person</td>	<td>0</td>	</tr>
-<tr>	<td>[青山]月１（前期）</td>	<td>健康・スポーツ演習</td>	<td>尾山 裕介</td>	<td>青山スタンダード科目</td>	<td>対面授業 / Classes in-person</td>	<td>0</td>	</tr>
-<tr>	<td>[青山]月１（前期）</td>	<td>健康・スポーツ演習</td>	<td>加藤 譲</td>	<td>青山スタンダード科目</td>	<td>対面授業 / Classes in-person</td>	<td>0</td>	</tr>
-<tr>	<td>[青山]月１（前期）</td>	<td>健康・スポーツ演習</td>	<td>宍戸 渉</td>	<td>青山スタンダード科目</td>	<td>対面授業 / Classes in-person</td>	<td>0</td>	</tr>
-<tr>	<td>[青山]月１（前期）</td>	<td>健康・スポーツ演習</td>	<td>髙丸 功</td>	<td>青山スタンダード科目</td>	<td>対面授業 / Classes in-person</td>	<td>0</td>	</tr>
-<tr>	<td>[青山]月１（前期）</td>	<td>データサイエンス</td>	<td>佐藤 浩志</td>	<td>青山スタンダード科目</td>	<td>対面授業 / Classes in-person</td>	<td>0</td>	</tr>
-<tr>	<td>[青山]月１（前期）</td>	<td>インテンシブ・ロシア語（Ａ）－１</td>	<td>GAVRILOVA,Maria</td>	<td>青山スタンダード科目</td>	<td>対面授業 / Classes in-person</td>	<td>0</td>	</tr>
-<tr>	<td>[青山]月１（前期）</td>	<td>スペイン語ⅡＡ－１（再）</td>	<td>佐々木 直美</td>	<td>青山スタンダード科目</td>	<td>対面授業 / Classes in-person</td>	<td>0</td>	</tr>
-<tr>	<td>[青山]月１（前期）</td>	<td>日本語（ⅠＳ）Ａ</td>	<td>許 司未</td>	<td>青山スタンダード科目</td>	<td>対面授業 / Classes in-person</td>	<td>0</td>	</tr>
-<tr>	<td>[青山]月１（前期）</td>	<td>日本事情ⅠＳ</td>	<td>市田 せつ子</td>	<td>青山スタンダード科目</td>	<td>対面授業 / Classes in-person</td>	<td>0</td>	</tr>
-<tr>	<td>[青山]月１（前期）</td>	<td>東洋美術史Ⅰ</td>	<td>漆 紅</td>	<td>文学部共通</td>	<td>対面授業 / Classes in-person</td>	<td>0</td>	</tr>
-<tr>	<td>[青山]月１（通年）</td>	<td>東洋美術史</td>	<td>漆 紅</td>	<td>文学部共通</td>	<td>対面授業 / Classes in-person</td>	<td>0</td>	</tr>
-<tr>	<td>[青山]月１（前期）</td>	<td>英語講読Ⅰ</td>	<td>北村 昌彦</td>	<td>文学部外国語科目</td>	<td>対面授業 / Classes in-person</td>	<td>0</td>	</tr>
-
+  <tr><td><input type="button" id="a1" onclick="modal(this)" value="詳細"></td><td>40</td><td>男</td><td>東北</td><td>123</td></tr>
+  <tr><td><input type="button" id="a2" onclick="modal(this)" value="詳細"></td><td>鈴木 茂</td><td>50</td><td>男</td><td>関東</td><td>5,487</td></tr>
+  <tr><td>A003</td><td>佐藤 和子</td><td>66</td><td>女</td><td></td><td>41</td></tr>
+  <tr><td>A004</td><td>ＸＸ商事</td><td></td><td>法人</td><td>関東</td><td>1,156</td></tr>
+  <tr><td>A005</td><td>伊藤 博</td><td>40</td><td>男</td><td>関西</td><td>8</td></tr>
+  <tr><td>A006</td><td>鈴木 洋子</td><td>36</td><td>女</td><td></td><td>753</td></tr>
+  <tr><td>A007</td><td>鈴木 幸子</td><td>25</td><td>女</td><td>東北</td><td>45</td></tr>
+  <tr><td>A008</td><td>田中 博 </td><td>20</td><td>男</td><td>関西</td><td>87</td></tr>
+  <tr><td>A008</td><td>ＹＹ販売</td><td></td><td>法人</td><td>東海</td><td>2,694</td></tr>
 </table>
-<div class="jikannwari">
-<button id="M1">月曜1</button>
 
-
-    
-
-  </body>
+</body>
 </html>
