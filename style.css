@@ -109,3 +109,17 @@
   width: 50px;
   min-height: 50px;
 }
+.jikannwari{
+  position: absolute;
+}
+#table{
+  position: sticky;
+  width: 200px;
+}
+
+
+.bgarea{
+  color: #050505;
+  width: 1000px;
+  height: 1000px;
+}
